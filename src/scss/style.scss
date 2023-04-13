@@ -1,52 +1,72 @@
 //fonts
 @font-face {
   font-family: 'TT Lakes';
-  src: local(''),
-      url('../fonts/TTLakes-Bold.woff') format('woff'),
-      url('../fonts/TTLakes-Bold.ttf') format('truetype');
+  src: local(''), url('../fonts/TTLakes-Bold.woff') format('woff'),
+    url('../fonts/TTLakes-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'TT Lakes';
-  src: local(''),
-      url('../fonts/TTLakes-Medium.woff') format('woff'),
-      url('../fonts/TTLakes-Medium.ttf') format('truetype');
+  src: local(''), url('../fonts/TTLakes-Medium.woff') format('woff'),
+    url('../fonts/TTLakes-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'TT Lakes';
-  src: local(''),
-      url('../fonts/TTLakes-Regular.woff') format('woff'),
-      url('../fonts/TTLakes-Regular.ttf') format('truetype');
-      font-style: normal;
-      font-weight: 400;
+  src: local(''), url('../fonts/TTLakes-Regular.woff') format('woff'),
+    url('../fonts/TTLakes-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
 }
 
-// variables
-$color-secondary: #7E7E82;
-$color-accent:  #B8FFEC;
+// colors
+$color-main: #1b1c21;
+$color-secondary: #7e7e82;
+$color-accent: #b8ffec;
+$color-light: #ffffff;
+$color-background: #f8f8f8;
 
+// breakpoints
+$mobile: 320px;
+$tablet: 768px;
+$desktop: 1140px;
 
+$tablet-min: $tablet;
+$desktop-min: $desktop;
+
+//common
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  color: $color-main;
 }
 
 body {
-  margin: 0;
-  padding: 0;
   font-family: 'TT Lakes', sans-serif;
+  background-color: $color-background;
 }
 
 a {
   text-decoration: none;
 }
 
+a:active,
+a:hover,
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
 img {
   width: 100%;
+  display: block;
 }
 
 .visually-hidden {
@@ -59,20 +79,51 @@ img {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-} 
+}
 
 .button {
   width: 40px;
   height: 40px;
+  border: 0;
+  border-radius: 0;
+  background-color: $color-light;
+  cursor: pointer;
+}
+
+.wrapper {
+  padding: 16px;
+  margin: 0 auto;
+}
+
+//header
+.header {
+  display: flex;
+  align-items: center;
+  margin: -16px;
+  padding: 18px 16px;
+  background-color: $color-light;
 }
 
 .header__menu-button {
-  background-color: white;
-  border: none;
+  margin-right: 16px;
 }
 
 .header__logo-image {
   width: 100px;
+}
+
+.header__contacts {
+  display: flex;
+  margin-left: auto;
+  padding: 0;
+}
+
+.header__contacts-button {
+  margin-left: 16px;
+}
+
+.header__contacts-item {
+  display: flex;
 }
 
 .header__contacts-item--call,
@@ -83,4 +134,114 @@ img {
 
 .header__contacts-text {
   display: none;
+}
+
+.header__contacts-item--order {
+  &::before {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 32px;
+    border-radius: 2px;
+    background: #eaeaea;
+    margin: auto 4px auto 20px;
+  }
+}
+
+//pagination
+.pagination {
+  padding: 24px 0;
+}
+
+.pagination__title {
+  display: flex;
+  margin-bottom: 24px;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: -0.6px;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 40px;
+    border-radius: 0 4px 4px 0;
+    background: #41f6d7;
+    margin: auto 12px auto -16px;
+  }
+}
+
+.pagination-list {
+  display: flex;
+  overflow: overlay;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+.pagination__link {
+  margin: 4px 12px;
+}
+
+.pagination__item {
+  color: $color-secondary;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  white-space: nowrap;
+  border: 2px solid transparent;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border: 2px solid $color-accent;
+    border-radius: 6px;
+    background-color: $color-light;
+  }
+}
+
+//section 'about'
+.about {
+  display: flex;
+  flex-direction: column;
+}
+
+.about__text {
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+}
+
+.about__text--tablet {
+  display: none;
+}
+
+.about__button {
+  margin: 16px 0;
+  width: 133px;
+  height: 24px;
+  background-color: $color-background;
+}
+
+.about__button-text {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.about__button-text::before {
+  content: url('/img/about_button_icon.svg');
+  margin-right: 8px;
+  display: inline-block;
+  vertical-align: center;
+  width: 24px;
+  height: 24px;
+}
+
+.about__image {
+  margin-left: -16px;
+  margin-right: -16px;
+  width: auto;
 }
