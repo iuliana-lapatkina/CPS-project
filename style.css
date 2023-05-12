@@ -93,6 +93,34 @@ button {
   left: 12.5px;
   box-shadow: -3px 3px #41f6d7; }
 
+.button-arrow {
+  position: relative; }
+  .button-arrow::before {
+    box-sizing: border-box;
+    position: absolute;
+    content: '';
+    width: 40px;
+    height: 40px;
+    right: 16px;
+    top: 16px;
+    pointer-events: inherit;
+    background: inherit;
+    border: 2px solid #ff3e79;
+    border-radius: 50%; }
+  .button-arrow::after {
+    position: absolute;
+    content: '';
+    width: 8.5px;
+    height: 8.5px;
+    right: 32.5px;
+    top: 31.5px;
+    pointer-events: inherit;
+    background: inherit;
+    border-top: 2px solid #ff3e79;
+    border-right: 2px solid #ff3e79;
+    border-radius: 1px;
+    transform: rotate(45deg); }
+
 .inner {
   padding: 0 16px;
   margin: 0 auto;
@@ -223,8 +251,7 @@ button {
   flex-basis: 100%;
   overflow: scroll; }
 
-.pagination-list::after,
-.pagination-list::before {
+.pagination-list::after {
   content: '';
   background: linear-gradient(270deg, #f8f8f8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
   position: absolute;
@@ -234,14 +261,8 @@ button {
   height: 100%;
   z-index: 2; }
   @media (min-width: 1120px) {
-    .pagination-list::after,
-    .pagination-list::before {
+    .pagination-list::after {
       display: none; } }
-
-.pagination-list::before {
-  background: linear-gradient(90deg, #f8f8f8 36.84%, rgba(248, 248, 248, 0.0001) 100%);
-  width: 34px;
-  left: 0; }
 
 .pagination-list::-webkit-scrollbar {
   width: 0; }
@@ -276,7 +297,7 @@ button {
 .about-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 10px; }
+  gap: 16px; }
   @media (min-width: 768px) {
     .about-wrapper {
       flex-direction: row;
@@ -301,7 +322,6 @@ button {
   font-size: 14px;
   line-height: 18px;
   letter-spacing: 0.2px;
-  flex-basis: 1;
   white-space: pre-line; }
   @media (min-width: 768px) {
     .about__text {
@@ -386,16 +406,13 @@ button {
   max-width: 240px; }
 
 .brands__item-button {
-  min-width: 240px;
-  height: 72px;
+  vertical-align: center;
   background-color: #ffffff;
   border: 1px solid #eaeaea;
-  border-radius: 4px; }
-
-.brands__item-button {
-  position: relative;
-  vertical-align: center;
-  padding: 16px; }
+  border-radius: 4px;
+  padding: 16px;
+  min-width: 240px;
+  height: 72px; }
   @media screen and (min-width: 768px) {
     .brands__item-button {
       min-width: 224px;
@@ -403,39 +420,10 @@ button {
   @media screen and (min-width: 1120px) {
     .brands__item-button {
       min-width: 240px; } }
-
-.brands__item-button--apple {
-  padding-top: 12px; }
-
-.brands__item-button--hp {
-  padding: 10px; }
-
-.brands__item-button::before {
-  box-sizing: border-box;
-  position: absolute;
-  content: '';
-  width: 40px;
-  height: 40px;
-  right: 16px;
-  top: 16px;
-  pointer-events: inherit;
-  background: inherit;
-  border: 2px solid #ff3e79;
-  border-radius: 50%; }
-
-.brands__item-button::after {
-  position: absolute;
-  content: '';
-  width: 8.5px;
-  height: 8.5px;
-  right: 32.5px;
-  top: 31.5px;
-  pointer-events: inherit;
-  background: inherit;
-  border-top: 2px solid #ff3e79;
-  border-right: 2px solid #ff3e79;
-  border-radius: 1px;
-  transform: rotate(45deg); }
+  .brands__item-button--apple {
+    padding-top: 12px; }
+  .brands__item-button--hp {
+    padding: 10px; }
 
 .brands__button {
   display: none; }
