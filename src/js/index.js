@@ -1,20 +1,35 @@
 import '../scss/style.scss'
 
 if (document.documentElement.clientWidth < 768) {
-  document.querySelector('.brands__container').classList.add('swiper')
-  document.querySelector('.brands__list').classList.add('swiper-wrapper')
+  document
+    .querySelectorAll('.brands__container, .services__container')
+    .forEach((elem) => elem.classList.add('swiper'))
+  document
+    .querySelectorAll('.brands__list, .services__list')
+    .forEach((elem) => elem.classList.add('swiper-wrapper'))
 
-  const swiperSlide = document.querySelectorAll('.brands__item')
+  const swiperSlide = document.querySelectorAll(
+    '.brands__item, .services__item'
+  )
   for (let i = 0; i < swiperSlide.length; i++) {
     swiperSlide[i].classList.add('swiper-slide')
   }
 
-  const swiper = new Swiper('.swiper', {
+  const swiperBrands = new Swiper('.swiper-brands', {
     sliderPerView: 'auto',
     spaceBetween: 16,
     mousewheel: true,
     pagination: {
-      el: '.swiper-pagination',
+      el: '.swiper-pagination-brands',
+      clickable: true
+    }
+  })
+  const swiperServices = new Swiper('.swiper-services', {
+    sliderPerView: 'auto',
+    spaceBetween: 16,
+    mousewheel: true,
+    pagination: {
+      el: '.swiper-pagination-services',
       clickable: true
     }
   })

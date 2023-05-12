@@ -1,23 +1,23 @@
-.brands {
+.services {
   position: relative;
   height: fit-content;
   border-top: 1px solid #b8ffec;
   margin-bottom: 8px;
-}
 
-.brands::after {
-  @include transparent-gradient;
+  &::after {
+    @include transparent-gradient;
 
-  @media screen and (min-width: $tablet) {
-    display: none;
+    @media screen and (min-width: $tablet) {
+      display: none;
+    }
   }
 }
 
-.brands__title {
+.services__title {
   @include section-title;
 }
 
-.brands__list {
+.services__list {
   @media screen and (min-width: $tablet) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -33,11 +33,16 @@
   }
 }
 
-.brands__item-button {
+.services__item-button {
   @include button-swiper;
+  display: flex;
+  align-items: start;
   padding: 16px;
   min-width: 240px;
-  height: 72px;
+  height: 160px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: $font-main;
 
   @media screen and (min-width: $tablet) {
     min-width: 224px;
@@ -47,17 +52,9 @@
   @media screen and (min-width: $desktop) {
     min-width: 240px;
   }
-
-  &--apple {
-    padding-top: 12px;
-  }
-
-  &--hp {
-    padding: 10px;
-  }
 }
 
-.brands__button {
+.services__button {
   display: none;
 
   @media screen and (min-width: $tablet) {
@@ -65,8 +62,8 @@
   }
 }
 
-.brands__item {
-  &:nth-child(n + 7) {
+.services__item {
+  &:last-child {
     @media screen and (min-width: $tablet) {
       display: none;
     }
@@ -74,18 +71,5 @@
     @media screen and (min-width: $desktop) {
       display: block;
     }
-  }
-
-  &:nth-child(n + 9) {
-    @media screen and (min-width: $desktop) {
-      display: none;
-    }
-  }
-}
-
-.brands__item-button {
-  @media screen and (min-width: $mobile) {
-    min-width: 224px;
-    width: 100%;
   }
 }

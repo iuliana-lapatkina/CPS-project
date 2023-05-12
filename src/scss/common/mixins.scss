@@ -26,6 +26,17 @@
   );
 }
 
+@mixin transparent-gradient {
+  position: absolute;
+  content: '';
+  width: 20px;
+  height: 100%;
+  right: 0;
+  top: 0;
+  z-index: 2;
+  background-image: linear-gradient(to right, transparent, $color-light);
+}
+
 @mixin button-swiper {
   vertical-align: center;
   background-color: $color-light;

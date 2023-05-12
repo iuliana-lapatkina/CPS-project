@@ -1,0 +1,17 @@
+.swiper {
+  padding: 20px 0 0 16px !important;
+  margin-left: 0px;
+
+  &.brands__container {
+    height: 130px;
+  }
+
+  &.services__container {
+    height: 218px;
+  }
+}
+
+.swiper-slide-active,
+.swiper-slide-next {
+  max-width: 240px;
+}
