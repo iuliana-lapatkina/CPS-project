@@ -16,7 +16,7 @@
       <div class="inner">
         <div class="header-wrap">
           <button class="button header__menu-button" aria-label="Открыть меню">
-            <img class="header__menu-image" src="/src/img/img-menu/menu_button.svg">
+            <img class="header__menu-image" src="img/img-menu/menu_button.svg">
           </button>
 
           <a href="#" class="header__logo-link">
@@ -25,22 +25,22 @@
 
           <ul class="header__contacts">
             <li class="header__contacts-item header__contacts-item--call">
-              <button class="button header__contacts-button" aria-label="Позвонить нам"><img class="header__contacts-image" src="/src/img/img-contacts/contacts-call.svg"></button>
+              <button class="button header__contacts-button" aria-label="Позвонить нам"><img class="header__contacts-image" src="/img/img-contacts/contacts-call.svg"></button>
             </li>
             <li class="header__contacts-item header__contacts-item--message">
-              <button class="button header__contacts-button" aria-label="Написать нам"><img class="header__contacts-image" src="/src/img/img-contacts/contacts-message.svg"></button>
+              <button class="button header__contacts-button" aria-label="Написать нам"><img class="header__contacts-image" src="./img/img-contacts/contacts-message.svg"></button>
             </li>
             <li class="header__contacts-item header__contacts-item--authorization">
-              <button class="button header__contacts-button" aria-label="Авторизоваться"><img class="header__contacts-image" src="/src/img/img-contacts/contacts-authorization.svg"></button>
+              <button class="button header__contacts-button" aria-label="Авторизоваться"><img class="header__contacts-image" src="img/img-contacts/contacts-authorization.svg"></button>
             </li>
             <li class="header__contacts-item header__contacts-item--order">
               <button class="button header__contacts-button" aria-label="Оставить заявку">
-                <img class="header__contacts-image" src="/src/img/img-contacts/contacts-order.svg">
+                <img class="header__contacts-image" src="img/img-contacts/contacts-order.svg">
               </button>
             </li>
             <li class="header__contacts-item header__contacts-item--status">
               <button class="button header__contacts-button" aria-label="Статус ремонта">
-                <img class="header__contacts-image" src="/src/img/img-contacts/contacts-status.svg">
+                <img class="header__contacts-image" src="img/img-contacts/contacts-status.svg">
               </button>
             </li>
           </ul>
@@ -58,13 +58,13 @@
               <li class="pagination__contacts-item pagination__contacts-item--order">
                 <button class="button pagination__contacts-button">
                   <span class="pagination__contacts-text">Оставить заявку</span>
-                  <img class="pagination__contacts-image" src="/src/img/img-contacts/contacts-order.svg">
+                  <img class="pagination__contacts-image" src="img/img-contacts/contacts-order.svg">
                 </button>
               </li>
               <li class="pagination__contacts-item header__contacts-item--status">
                 <button class="button pagination__contacts-button">
                   <span class="pagination__contacts-text">Статус ремонта</span>
-                  <img class="pagination__contacts-image" src="/src/img/img-contacts/contacts-status.svg">
+                  <img class="pagination__contacts-image" src="img/img-contacts/contacts-status.svg">
                 </button>
               </li>
             </ul>
@@ -113,7 +113,7 @@
         <div class="inner inner-brands">
           <h2 class="brands__title">Ремонт техники различных брендов</h2>
 
-          <div class="brands__container">
+          <div class="brands__container swiper-brands">
             <div class="brands__list">
               <div class="brands__item">
                 <button class="button brands__item-button button-arrow">
@@ -171,7 +171,7 @@
                 </button>  
               </div>
             </div>
-            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination swiper-pagination-brands"></div>
             <button class="button button-show-hide button-show brands__button">
               Показать все
             </button>
@@ -180,8 +180,37 @@
       </section>
 
       <section class="services">
-        <div class="services inner-services">
-
+        <div class="inner inner-services">
+          <h2 class="services__title">Ремонт различных видов техники</h2>
+          
+          <div class="services__container swiper-services">
+            <div class="services__list">
+              <div class="services__item">
+                <button class="button services__item-button button-arrow">
+                  Ремонт ноутбуков
+                </button>  
+              </div>
+              <div class="services__item">
+                <button class="button services__item-button button-arrow">
+                  Ремонт планшетов
+                </button>  
+              </div>
+              <div class="services__item">
+                <button class="button services__item-button button-arrow">
+                  Ремонт ПК
+                </button>  
+              </div>
+              <div class="services__item">
+                <button class="button services__item-button button-arrow">
+                  Ремонт мониторов
+                </button>  
+              </div>
+              </div>
+            </div>
+            <div class="swiper-pagination swiper-pagination-services"></div>
+            <button class="button button-show-hide button-show services__button">
+              Показать все
+            </button>
         </div>
       </section>
 
