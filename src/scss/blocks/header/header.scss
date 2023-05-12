@@ -1,12 +1,12 @@
 .header {
   border-bottom: 1px solid #d9fff5;
+  background-color: $color-light;
 }
 
 .header-wrap {
   display: flex;
   align-items: center;
   padding: 18px 0;
-  background-color: $color-light;
 
   @media (min-width: $desktop) {
     display: none;
