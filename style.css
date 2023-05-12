@@ -111,13 +111,13 @@ button {
       padding: 16px; } }
 
 .header {
-  border-bottom: 1px solid #d9fff5; }
+  border-bottom: 1px solid #d9fff5;
+  background-color: #ffffff; }
 
 .header-wrap {
   display: flex;
   align-items: center;
-  padding: 18px 0;
-  background-color: #ffffff; }
+  padding: 18px 0; }
   @media (min-width: 1120px) {
     .header-wrap {
       display: none; } }
@@ -275,7 +275,8 @@ button {
 
 .about-wrapper {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  gap: 10px; }
   @media (min-width: 768px) {
     .about-wrapper {
       flex-direction: row;
