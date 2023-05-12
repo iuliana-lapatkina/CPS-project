@@ -1,0 +1,21 @@
+.inner {
+  padding: 0 16px;
+  margin: 0 auto;
+  max-width: 1200px;
+
+  @media (min-width: $tablet) {
+    padding: 0 24px;
+  }
+}
+
+.inner-pagination {
+  padding: 0 0 0 16px;
+}
+
+.inner-brands {
+  padding: 0;
+
+  @media screen and (min-width: $tablet) {
+    padding: 16px;
+  }
+}

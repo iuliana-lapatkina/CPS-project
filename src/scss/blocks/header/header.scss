@@ -1,0 +1,76 @@
+.header {
+  border-bottom: 1px solid #d9fff5;
+}
+
+.header-wrap {
+  display: flex;
+  align-items: center;
+  padding: 18px 0;
+  background-color: $color-light;
+
+  @media (min-width: $desktop) {
+    display: none;
+  }
+}
+
+.header__menu-button {
+  margin-right: 16px;
+}
+
+.header__logo-image {
+  width: 96px;
+}
+
+.header__logo-link {
+  display: inherit;
+
+  &::before {
+    content: '';
+    display: none;
+    width: 2px;
+    height: 32px;
+    border-radius: 2px;
+    background: #eaeaea;
+    margin: auto 20px auto 4px;
+
+    @media (min-width: $tablet) {
+      display: block;
+    }
+  }
+}
+
+.header__contacts {
+  display: flex;
+  margin-left: auto;
+  padding: 0;
+}
+
+.header__contacts-button {
+  margin-left: 16px;
+}
+
+.header__contacts-item {
+  display: flex;
+}
+
+.header__contacts-item--call,
+.header__contacts-item--message,
+.header__contacts-item--authorization {
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: inherit;
+  }
+}
+
+.header__contacts-item--order {
+  &::before {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 32px;
+    border-radius: 2px;
+    background: #eaeaea;
+    margin: auto 4px auto 20px;
+  }
+}

@@ -1,0 +1,27 @@
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@mixin section-title {
+  padding: 16px 0 16px 16px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  text-transform: uppercase;
+  color: $color-secondary;
+  background-color: $color-light;
+  background-image: linear-gradient(
+    to right,
+    $color-background 30%,
+    $color-light
+  );
+}
