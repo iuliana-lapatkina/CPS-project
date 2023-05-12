@@ -59,8 +59,7 @@
   overflow: scroll;
 }
 
-.pagination-list::after,
-.pagination-list::before {
+.pagination-list::after {
   content: '';
   background: linear-gradient(
     270deg,
@@ -77,16 +76,6 @@
   @media (min-width: $desktop) {
     display: none;
   }
-}
-
-.pagination-list::before {
-  background: linear-gradient(
-    90deg,
-    #f8f8f8 36.84%,
-    rgba(248, 248, 248, 0.0001) 100%
-  );
-  width: 34px;
-  left: 0;
 }
 
 .pagination-list::-webkit-scrollbar {

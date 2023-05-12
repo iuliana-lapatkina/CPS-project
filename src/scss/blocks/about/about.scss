@@ -13,7 +13,7 @@
 .about-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 16px;
 
   @media (min-width: $tablet) {
     flex-direction: row;
@@ -33,7 +33,6 @@
   font-size: 14px;
   line-height: 18px;
   letter-spacing: 0.2px;
-  flex-basis: 1;
   white-space: pre-line;
 
   @media (min-width: $tablet) {

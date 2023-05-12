@@ -25,3 +25,10 @@
     $color-light
   );
 }
+
+@mixin button-swiper {
+  vertical-align: center;
+  background-color: $color-light;
+  border: 1px solid #eaeaea;
+  border-radius: 4px;
+}

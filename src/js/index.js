@@ -9,7 +9,7 @@ if (document.documentElement.clientWidth < 768) {
     swiperSlide[i].classList.add('swiper-slide')
   }
 
-  swiper = new Swiper('.swiper', {
+  const swiper = new Swiper('.swiper', {
     sliderPerView: 'auto',
     spaceBetween: 16,
     mousewheel: true,
@@ -29,7 +29,7 @@ brandsButton.addEventListener('click', () => {
 const aboutButton = document.querySelector('.about__button')
 aboutButton.addEventListener('click', () => {
   changeVisibility('.about__text-item')
-  changeButton(aboutButton, 'Читать далее!', 'Скрыть')
+  changeButton(aboutButton, 'Читать далее', 'Скрыть')
 })
 
 function changeButton(button, openText, closeText) {
