@@ -1,0 +1,47 @@
+.footer {
+  padding: 16px 0 19px 0;
+  border-top: 1px solid #b8ffec;
+
+  @media screen and (min-width: $tablet) {
+    padding: 25px 0;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 21px 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @media screen and (min-width: $tablet) {
+      flex-direction: row;
+      gap: 32px;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    color: $color-secondary;
+    text-align: center;
+
+    @media screen and (min-width: $tablet) {
+      flex-basis: 33%;
+      text-align: start;
+    }
+
+    &:first-child {
+      white-space: pre-line;
+    }
+
+    &:last-child {
+      @media screen and (min-width: $tablet) {
+        flex-basis: 33%;
+        text-align: end;
+      }
+    }
+  }
+}

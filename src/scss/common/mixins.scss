@@ -11,19 +11,31 @@
 }
 
 @mixin section-title {
-  padding: 16px 0 16px 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
   letter-spacing: -0.2px;
   text-transform: uppercase;
   color: $color-secondary;
-  background-color: $color-light;
+  background-color: transparent;
+}
+
+@mixin background-title {
+  content: '';
+  width: 1000%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -500%;
+  z-index: -1;
   background-image: linear-gradient(
     to right,
-    $color-background 30%,
+    $color-background 25%,
     $color-light
   );
+  overflow-x: hidden;
 }
 
 @mixin transparent-gradient {

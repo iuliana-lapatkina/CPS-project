@@ -1,17 +1,23 @@
 .swiper {
-  padding: 20px 0 0 16px !important;
-  margin-left: 0px;
-
   &.brands__container {
-    height: 130px;
+    height: 118px;
   }
 
   &.services__container {
-    height: 218px;
+    height: 206px;
+  }
+
+  &.price__container {
+    height: 242px;
   }
 }
 
 .swiper-slide-active,
 .swiper-slide-next {
   max-width: 240px;
+}
+
+.swiper-slide-active.price__table-line,
+.swiper-slide-next.price__table-line {
+  max-width: 260px;
 }

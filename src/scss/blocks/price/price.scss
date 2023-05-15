@@ -1,0 +1,259 @@
+.price {
+  position: relative;
+  height: fit-content;
+  border-top: 1px solid #b8ffec;
+  margin-bottom: 40px;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 47px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+  }
+
+  &::after {
+    @include transparent-gradient;
+
+    @media screen and (min-width: $tablet) {
+      display: none;
+    }
+  }
+
+  &__title {
+    @include section-title;
+    margin-bottom: 31px;
+    position: relative;
+
+    &::before {
+      @include background-title;
+    }
+  }
+
+  &__table-wrap {
+    position: relative;
+
+    &::before,
+    &::after {
+      @media screen and (min-width: $tablet) {
+        position: absolute;
+        content: '';
+        width: 16px;
+        height: 75%;
+        top: 55px;
+        pointer-events: inherit;
+        background: $color-light;
+        border-radius: 8px 8px 8px 8px;
+      }
+    }
+
+    &::before {
+      @media screen and (min-width: $tablet) {
+        left: 0;
+      }
+    }
+
+    &::after {
+      @media screen and (min-width: $tablet) {
+        right: 0;
+      }
+    }
+  }
+
+  .price__list {
+    display: flex;
+
+    @media screen and (min-width: $tablet) {
+      display: inherit;
+    }
+  }
+
+  &__table {
+    margin-bottom: 32px;
+    table-layout: fixed;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.2;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  &__table-header {
+    background-color: $color-background;
+    display: none;
+
+    @media screen and (min-width: $tablet) {
+      display: contents;
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  &__table-headline {
+    border-color: $color-background;
+    padding: 16px 0;
+  }
+
+  &__row-title {
+    padding: 16px;
+    text-align: start;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: initial;
+    color: $color-secondary;
+
+    &:nth-child(1) {
+      width: 49%;
+    }
+
+    &:nth-child(2) {
+      width: 15%;
+    }
+
+    &:nth-child(3) {
+      width: 15%;
+    }
+
+    &:nth-child(4) {
+      width: 21%;
+
+      @media (min-width: $desktop) {
+        width: 15%;
+      }
+    }
+  }
+
+  &__table-line {
+    display: flex;
+    box-sizing: content-box;
+    width: 260px;
+    height: 200px;
+    flex-direction: column;
+    flex-shrink: 0;
+    margin-right: 16px;
+
+    // @media (min-width: $tablet) {
+    //   display: inherit;
+    //   box-sizing: inherit;
+    //   width: inherit;
+    //   height: inherit;
+    //   margin-right: inherit;
+    // }
+  }
+
+  &__table-line:not(:nth-child(1)) {
+    @media (min-width: $tablet) {
+      border-top: 1px solid #eaeaea;
+    }
+  }
+
+  &__table-cell {
+    background: $color-light;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 33%;
+    padding: 16px;
+    justify-items: bottom;
+    vertical-align: bottom;
+
+    @media (min-width: $tablet) {
+      display: inherit;
+      justify-items: inherit;
+      vertical-align: inherit;
+      padding: 23px 0;
+      text-align: start;
+    }
+
+    &--with-button {
+      position: relative;
+      flex-basis: 0;
+
+      @media (min-width: $tablet) {
+        flex-basis: inherit;
+        position: inherit;
+        text-align: end;
+      }
+    }
+
+    &:first-child,
+    &:last-child {
+      @media (min-width: $tablet) {
+        padding: 0 16px;
+      }
+    }
+
+    &:before {
+      content: attr(data-label);
+      color: $color-secondary;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+
+      @media (min-width: $tablet) {
+        display: none;
+      }
+    }
+  }
+
+  &__text {
+    padding-bottom: 16px;
+    padding-right: 16px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.2;
+
+    @media (min-width: $tablet) {
+      width: 60%;
+    }
+  }
+
+  &__link {
+    position: relative;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2;
+    white-space: pre-line;
+
+    @media (min-width: 400px) {
+      white-space: normal;
+    }
+
+    @media (min-width: $tablet) {
+      padding-right: 0;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      width: 8px;
+      height: 2px;
+      right: 68px;
+      top: 68.5%;
+      pointer-events: inherit;
+      background: $color-button;
+      border-radius: 2px 0 0 2px;
+      transform: rotate(45deg);
+
+      @media (min-width: 400px) {
+        top: 38.5%;
+        right: -16px;
+      }
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+      top: 78.8%;
+
+      @media (min-width: 400px) {
+        top: 57.8%;
+      }
+    }
+  }
+}

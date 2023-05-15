@@ -4,6 +4,14 @@
   border-top: 1px solid #b8ffec;
   margin-bottom: 8px;
 
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 32px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+  }
+
   &::after {
     @include transparent-gradient;
 
@@ -15,6 +23,11 @@
 
 .services__title {
   @include section-title;
+  position: relative;
+
+  &::before {
+    @include background-title;
+  }
 }
 
 .services__list {

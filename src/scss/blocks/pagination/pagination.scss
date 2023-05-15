@@ -26,6 +26,10 @@
     border-radius: 0 4px 4px 0;
     background: #41f6d7;
     margin: auto 12px auto -16px;
+
+    @media (min-width: $tablet) {
+      margin: auto 12px auto -24px;
+    }
   }
 }
 
@@ -60,6 +64,10 @@
 
   &::after {
     @include transparent-gradient;
+
+    @media (min-width: $tablet) {
+      width: 30px;
+    }
 
     @media (min-width: $desktop) {
       display: none;
