@@ -76,13 +76,19 @@
 }
 
 .services__item {
-  &:last-child {
+  &:nth-child(n + 4) {
     @media screen and (min-width: $tablet) {
       display: none;
     }
 
     @media screen and (min-width: $desktop) {
       display: block;
+    }
+  }
+
+  &:nth-child(n + 5) {
+    @media screen and (min-width: $desktop) {
+      display: none;
     }
   }
 }

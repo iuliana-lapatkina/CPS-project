@@ -59,6 +59,12 @@ aboutButton.addEventListener('click', () => {
   changeButton(aboutButton, 'Читать далее', 'Скрыть')
 })
 
+const servicesButton = document.querySelector('.services__button')
+servicesButton.addEventListener('click', () => {
+  changeVisibility('.services__item')
+  changeButton(servicesButton, 'Показать все', 'Скрыть')
+})
+
 function changeButton(button, openText, closeText) {
   button.classList.toggle('button-show')
   if (button.classList.contains('button-show')) {
