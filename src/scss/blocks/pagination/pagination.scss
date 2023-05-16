@@ -10,7 +10,7 @@
 }
 
 .pagination__title {
-  display: flex;
+  position: relative;
   margin-bottom: 24px;
   font-size: 28px;
   font-weight: 700;
@@ -19,16 +19,18 @@
   z-index: 3;
 
   &::before {
+    position: absolute;
     content: '';
     display: inline-block;
     width: 4px;
     height: 40px;
     border-radius: 0 4px 4px 0;
     background: #41f6d7;
-    margin: auto 12px auto -16px;
+    top: 0;
+    left: -16px;
 
     @media (min-width: $tablet) {
-      margin: auto 12px auto -24px;
+      left: -32px;
     }
   }
 }

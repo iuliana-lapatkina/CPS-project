@@ -24,6 +24,7 @@
 .services__title {
   @include section-title;
   position: relative;
+  margin-bottom: 24px;
 
   &::before {
     @include background-title;

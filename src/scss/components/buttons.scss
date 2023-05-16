@@ -133,3 +133,23 @@
     top: 53.2%;
   }
 }
+
+.button-animation {
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.button-animation:hover,
+.button-animation:focus,
+.button-animation:active {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
+.pagination__contacts-image {
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.pagination__contacts-button:hover > .pagination__contacts-image {
+  opacity: 0.8;
+  transform: scale(1.1);
+}

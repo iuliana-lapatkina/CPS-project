@@ -1,0 +1,190 @@
+.overlay-active {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.menu {
+  display: none;
+  overflow: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  z-index: 5;
+}
+
+.menu-wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 5;
+  padding: 18px 24px 32px 24px;
+  width: 320px;
+  background-color: $color-light;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  box-shadow: 4px 0 30px 0 rgba(14, 24, 80, 0.2),
+    -2px 0 4px 0 rgba(69, 79, 126, 0.02);
+}
+
+.menu__header {
+  display: flex;
+  align-content: center;
+  margin-bottom: 21px;
+}
+
+.menu__button-close {
+  position: relative;
+  margin-right: 20px;
+  background-color: $color-button;
+  border: 1px solid $color-button;
+  border-radius: 50%;
+}
+
+.menu__button-close::before,
+.menu__button-close::after {
+  position: absolute;
+  content: '';
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  width: 22px;
+  height: 2.2px;
+  border-radius: 2px;
+  background-color: $color-light;
+}
+
+.menu__button-close::before {
+  transform: rotate(45deg);
+}
+
+.menu__button-close::after {
+  transform: rotate(-45deg);
+}
+
+.menu__button-search {
+  margin-left: auto;
+}
+.menu__logo {
+  transition: transform 0.5s ease-in-out;
+}
+
+.menu__logo:focus,
+.menu__logo:hover {
+  transform: scale(1.1);
+}
+
+.menu__list {
+  margin-bottom: 32px;
+}
+
+.menu__link:hover,
+.menu__link:focus,
+.menu__link:active {
+  color: $color-secondary;
+}
+
+.menu__item {
+  position: relative;
+}
+
+.menu__item::before {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 4px;
+  height: 32px;
+  border-radius: 0 4px 4px 0;
+  background-color: transparent;
+  margin: -4px 12px auto -24px;
+}
+
+.menu__item:hover::before,
+.menu__item:focus::before,
+.menu__item:active::before {
+  background-color: #41f6d7;
+}
+
+.menu__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.menu__contacts {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.menu__contacts-item:not(:last-child) {
+  margin-right: 16px;
+}
+
+.menu__mail {
+  margin-bottom: 12px;
+}
+
+.menu__phone {
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.6px;
+}
+
+.menu__mail:hover,
+.menu__mail:focus,
+.menu__mail:active,
+.menu__phone:hover,
+.menu__phone:focus,
+.menu__phone:active {
+  cursor: pointer;
+  color: $color-secondary;
+}
+
+// .menu__lang {
+//   display: flex;
+//   text-transform: uppercase;
+// }
+
+// .menu__lang-item:not(:last-child) {
+//   margin-right: 7px;
+// }
+
+// .menu__lang-item:hover,
+// .menu__lang-item:focus,
+// .menu__lang-item:active {
+//   color: $color-secondary;
+// }
+
+.menu__lang {
+  display: flex;
+  appearance: none;
+}
+
+.menu__lang-button {
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.menu__lang-button:not(:last-child) {
+  margin-right: 7px;
+}
+
+.menu__lang-button label {
+  cursor: pointer;
+}
+
+.menu__lang-button label:hover {
+  color: $color-secondary;
+}
+
+.menu__lang-input[type='radio']:checked + label {
+  color: $color-secondary;
+}

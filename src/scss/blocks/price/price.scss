@@ -23,6 +23,7 @@
   &__title {
     @include section-title;
     position: relative;
+    margin-bottom: 24px;
 
     &::before {
       @include background-title;
@@ -66,7 +67,6 @@
   }
 
   &__table {
-    margin-bottom: 32px;
     table-layout: fixed;
     width: 100%;
     font-size: 14px;
@@ -75,6 +75,14 @@
     letter-spacing: 0.2;
     border-collapse: collapse;
     border-spacing: 0;
+
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 24px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 32px;
+    }
   }
 
   &__table-header {
@@ -130,7 +138,7 @@
 
     @media screen and (max-width: 767px) {
       display: flex;
-      width: 260px;
+      min-width: 240px;
       height: 200px;
     }
 

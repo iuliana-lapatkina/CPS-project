@@ -81,3 +81,51 @@ function changeVisibility(block) {
     changeBlock[i].classList.toggle('open')
   }
 }
+
+function openCloseModal(block) {
+  block.classList.toggle('open')
+  overlay.classList.toggle('overlay-active')
+}
+
+const menu = document.querySelector('.menu')
+const menuContainer = document.querySelector('.menu-container')
+const overlay = document.querySelector('.overlay')
+const menuButtonOpen = document.querySelector('.header__menu-button')
+const menuButtonClose = document.querySelector('.menu__button-close')
+menuButtonOpen.addEventListener('click', () => {
+  openCloseModal(menu)
+})
+menuButtonClose.addEventListener('click', () => {
+  openCloseModal(menu)
+})
+// window.addEventListener('click', function (e) {
+//   if (menu.classList.contains('open') && !menuContainer.contains(e.target)) {
+//     // menu.classList.remove('open')
+//     menu.style.display = 'none'
+//   }
+// })
+// document.addEventListener('click', outsideEvtListener)
+// function outsideEvtListener(evt) {
+//   if (evt.target === menuContainer || menuContainer.contains(evt.target)) {
+//     return
+//   }
+//   menu.classList.add('open')
+// }
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    menu.classList.toggle('open')
+    overlay.classList.toggle('overlay-active')
+  }
+})
+
+document.addEventListener('click', function (e) {
+  if (
+    menu.classList.contains('open') &&
+    !menuContainer.contains(e.target) &&
+    !menuButtonOpen.contains(e.target)
+  ) {
+    menu.classList.toggle('open')
+    overlay.classList.toggle('overlay-active')
+  }
+})
