@@ -493,7 +493,8 @@ input {
     @media (min-width: 1440px) {
       .about__text-item--desktop {
         display: inline; } }
-    .about__text-item--desktop:last-child.open ~ button {
+    .about__text ~ button.about__button.button-show-hide:not(.button-show) {
+      display: block;
       margin-top: 16px; }
   .about__button.button-show-hide:not(.button-show) {
     display: block;
