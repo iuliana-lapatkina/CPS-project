@@ -13,6 +13,10 @@
     @include visually-hidden;
   }
 
+  &__content {
+    margin-right: 16px;
+  }
+
   &__text {
     font-size: 14px;
     line-height: 18px;
@@ -44,6 +48,11 @@
         margin-top: 16px;
       }
     }
+  }
+
+  &__button.button-show-hide:not(.button-show) {
+    display: block;
+    margin-top: 16px;
   }
 
   &__image {
