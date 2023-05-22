@@ -493,6 +493,12 @@ input {
     @media (min-width: 1440px) {
       .about__text-item--desktop {
         display: inline; } }
+    .about__text ~ button.about__button.button-show-hide.button-show {
+      display: block;
+      margin-top: -36px; 
+     @media (min-width: 1440px) {
+      display: inherit;
+      margin-top: inherit; } }
     .about__text ~ button.about__button.button-show-hide:not(.button-show) {
       display: block;
       margin-top: 16px; }
