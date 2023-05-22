@@ -68,3 +68,20 @@
     }
   }
 }
+
+.about__button {
+  margin-top: -22px;
+  display: block;
+
+  @media (min-width: $tablet) {
+    margin-top: 0;
+  }
+
+  @media (min-width: $desktop) {
+    display: none;
+  }
+}
+.about__text ~ .about__button:not(.button-show) {
+  display: block;
+  margin-top: 16px;
+}
