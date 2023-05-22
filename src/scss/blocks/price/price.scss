@@ -113,11 +113,9 @@
       width: 49%;
     }
 
-    &:nth-child(2) {
-      width: 15%;
-    }
-
+    &:nth-child(2),
     &:nth-child(3) {
+      padding-left: 0;
       width: 15%;
     }
 
@@ -274,5 +272,34 @@
         top: 57.8%;
       }
     }
+  }
+}
+
+.price-button {
+  @include button-long;
+  position: absolute;
+  height: 32px;
+  width: 119px;
+  bottom: 16px;
+  right: 16px;
+  padding-left: 12px;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+    width: 8px;
+    height: 2px;
+    right: 16px;
+    top: 39%;
+    pointer-events: inherit;
+    background: $color-light;
+    border-radius: 2px 0 0 2px;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+    top: 53.2%;
   }
 }

@@ -1,17 +1,22 @@
 @import '/common/fonts';
 @import '/common/variables';
 @import '/common/mixins';
-
 @import '/common/common';
+@import '/common/overlays';
+@import '/common/wrappers';
+
 @import '/components/buttons';
 @import '/components/inner';
 @import '/components/swiper';
 
 @import '/blocks/header/header';
-@import '/blocks/menu/menu';
 @import '/blocks/pagination/pagination';
 @import '/blocks/about/about';
 @import '/blocks/brands/brands';
 @import '/blocks/services/services';
 @import '/blocks/price/price';
 @import '/blocks/footer/footer';
+
+@import '/modals/menu';
+@import '/modals/feedback';
+@import '/modals/call';

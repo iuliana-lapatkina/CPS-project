@@ -43,6 +43,11 @@
   }
 }
 
+.header__logo-link:active,
+.header__logo-link:hover {
+  display: inherit;
+}
+
 .header__contacts {
   display: flex;
   margin-left: auto;

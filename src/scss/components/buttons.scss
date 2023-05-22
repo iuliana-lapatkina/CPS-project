@@ -95,45 +95,6 @@
   }
 }
 
-.price-button {
-  position: absolute;
-  bottom: 16px;
-  right: 16px;
-  padding-left: 12px;
-  text-align: start;
-  height: 32px;
-  width: 119px;
-  font-family: $font-main;
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 24px;
-  letter-spacing: -0.15;
-  text-transform: uppercase;
-  color: $color-light;
-  background-color: $color-button;
-  border: 1px solid $color-button;
-  border-radius: 16px;
-
-  &::before,
-  &::after {
-    position: absolute;
-    content: '';
-    width: 8px;
-    height: 2px;
-    right: 16px;
-    top: 39%;
-    pointer-events: inherit;
-    background: $color-light;
-    border-radius: 2px 0 0 2px;
-    transform: rotate(45deg);
-  }
-
-  &::after {
-    transform: rotate(-45deg);
-    top: 53.2%;
-  }
-}
-
 .button-animation {
   transition: transform 0.3s, opacity 0.3s;
 }
@@ -146,10 +107,40 @@
 }
 
 .pagination__contacts-image {
-  transition: transform 0.3s, opacity 0.3s;
+  transition: transform 0.5s, opacity 0.5s;
 }
 
 .pagination__contacts-button:hover > .pagination__contacts-image {
   opacity: 0.8;
   transform: scale(1.1);
+}
+
+.button-close {
+  position: relative;
+  margin-right: 16px;
+  background-color: $color-button;
+  border: 1px solid $color-button;
+  border-radius: 50%;
+}
+
+.button-close::before,
+.button-close::after {
+  position: absolute;
+  content: '';
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  width: 22px;
+  height: 2.2px;
+  border-radius: 2px;
+  background-color: $color-light;
+}
+
+.button-close::before {
+  transform: rotate(45deg);
+}
+
+.button-close::after {
+  transform: rotate(-45deg);
 }

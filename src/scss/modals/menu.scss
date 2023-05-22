@@ -1,73 +1,30 @@
-.overlay-active {
-  position: absolute;
-  z-index: 3;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.9);
-}
-
 .menu {
   display: none;
   overflow: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   z-index: 5;
-}
-
-.menu-wrapper {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 5;
-  padding: 18px 24px 32px 24px;
-  width: 320px;
   background-color: $color-light;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: -0.2px;
-  box-shadow: 4px 0 30px 0 rgba(14, 24, 80, 0.2),
-    -2px 0 4px 0 rgba(69, 79, 126, 0.02);
+
+  @media screen and (min-width: $desktop) {
+    display: inherit;
+  }
 }
 
 .menu__header {
   display: flex;
   align-content: center;
   margin-bottom: 21px;
+
+  @media (min-width: $desktop) {
+    margin-bottom: 37px;
+  }
 }
 
 .menu__button-close {
-  position: relative;
-  margin-right: 20px;
-  background-color: $color-button;
-  border: 1px solid $color-button;
-  border-radius: 50%;
-}
-
-.menu__button-close::before,
-.menu__button-close::after {
-  position: absolute;
-  content: '';
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  width: 22px;
-  height: 2.2px;
-  border-radius: 2px;
-  background-color: $color-light;
-}
-
-.menu__button-close::before {
-  transform: rotate(45deg);
-}
-
-.menu__button-close::after {
-  transform: rotate(-45deg);
+  @media (min-width: $desktop) {
+    display: none;
+  }
 }
 
 .menu__button-search {
@@ -84,6 +41,10 @@
 
 .menu__list {
   margin-bottom: 32px;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 268px;
+  }
 }
 
 .menu__link:hover,
@@ -104,7 +65,11 @@
   height: 32px;
   border-radius: 0 4px 4px 0;
   background-color: transparent;
-  margin: -4px 12px auto -24px;
+  margin: -4px 12px auto -1 * ($mobile-main);
+
+  @media screen and (min-width: $desktop) {
+    margin-left: -22px;
+  }
 }
 
 .menu__item:hover::before,
@@ -123,14 +88,16 @@
 }
 
 .menu__contacts-item:not(:last-child) {
-  margin-right: 16px;
+  margin-right: $mobile-main;
 }
 
 .menu__mail {
+  display: block;
   margin-bottom: 12px;
 }
 
 .menu__phone {
+  display: block;
   margin-bottom: 8px;
   font-weight: 700;
   font-size: 24px;
@@ -147,21 +114,6 @@
   cursor: pointer;
   color: $color-secondary;
 }
-
-// .menu__lang {
-//   display: flex;
-//   text-transform: uppercase;
-// }
-
-// .menu__lang-item:not(:last-child) {
-//   margin-right: 7px;
-// }
-
-// .menu__lang-item:hover,
-// .menu__lang-item:focus,
-// .menu__lang-item:active {
-//   color: $color-secondary;
-// }
 
 .menu__lang {
   display: flex;
