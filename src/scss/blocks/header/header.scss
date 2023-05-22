@@ -1,85 +1,71 @@
 .header {
   border-bottom: 1px solid #d9fff5;
   background-color: $color-light;
-}
 
-.header-wrap {
-  display: flex;
-  align-items: center;
-  padding: 18px 16px 18px 0;
-
-  @media (min-width: $tablet) {
-    padding-right: 0;
+  &__menu-button {
+    margin-right: 16px;
   }
 
-  @media (min-width: $desktop) {
-    display: none;
+  &__logo-image {
+    width: 96px;
   }
-}
 
-.header__menu-button {
-  margin-right: 16px;
-}
+  &__logo-link {
+    display: inherit;
 
-.header__logo-image {
-  width: 96px;
-}
+    &:active,
+    &:hover {
+      display: inherit;
+    }
 
-.header__logo-link {
-  display: inherit;
+    &::before {
+      content: '';
+      display: none;
+      width: 2px;
+      height: 32px;
+      border-radius: 2px;
+      background: #eaeaea;
+      margin: auto 20px auto 4px;
 
-  &::before {
-    content: '';
-    display: none;
-    width: 2px;
-    height: 32px;
-    border-radius: 2px;
-    background: #eaeaea;
-    margin: auto 20px auto 4px;
-
-    @media (min-width: $tablet) {
-      display: block;
+      @media (min-width: $tablet) {
+        display: block;
+      }
     }
   }
-}
 
-.header__logo-link:active,
-.header__logo-link:hover {
-  display: inherit;
-}
-
-.header__contacts {
-  display: flex;
-  margin-left: auto;
-  padding: 0;
-}
-
-.header__contacts-button {
-  margin-left: 16px;
-}
-
-.header__contacts-item {
-  display: flex;
-}
-
-.header__contacts-item--call,
-.header__contacts-item--message,
-.header__contacts-item--authorization {
-  display: none;
-
-  @media (min-width: $tablet) {
-    display: inherit;
+  &__contacts {
+    display: flex;
+    margin-left: auto;
+    padding: 0;
   }
-}
 
-.header__contacts-item--order {
-  &::before {
-    content: '';
-    display: block;
-    width: 2px;
-    height: 32px;
-    border-radius: 2px;
-    background: #eaeaea;
-    margin: auto 4px auto 20px;
+  &__contacts-button {
+    margin-left: 16px;
+  }
+
+  &__contacts-item {
+    display: flex;
+
+    &--call,
+    &--message,
+    &--authorization {
+      display: none;
+
+      @media (min-width: $tablet) {
+        display: inherit;
+      }
+    }
+  }
+
+  &--order {
+    &::before {
+      content: '';
+      display: block;
+      width: 2px;
+      height: 32px;
+      border-radius: 2px;
+      background: #eaeaea;
+      margin: auto 4px auto 20px;
+    }
   }
 }

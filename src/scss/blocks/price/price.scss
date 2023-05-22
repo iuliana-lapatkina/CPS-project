@@ -139,14 +139,6 @@
       min-width: 240px;
       height: 200px;
     }
-
-    // @media (min-width: $tablet) {
-    //   display: inherit;
-    //   box-sizing: inherit;
-    //   width: inherit;
-    //   height: inherit;
-    //   margin-right: inherit;
-    // }
   }
 
   &__table-line:not(:nth-child(1)) {
@@ -157,7 +149,6 @@
 
   &__table-cell {
     background: $color-light;
-    // display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 16px;

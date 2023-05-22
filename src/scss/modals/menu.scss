@@ -9,134 +9,135 @@
   @media screen and (min-width: $desktop) {
     display: inherit;
   }
-}
 
-.menu__header {
-  display: flex;
-  align-content: center;
-  margin-bottom: 21px;
+  &__header {
+    display: flex;
+    align-content: center;
+    margin-bottom: 21px;
 
-  @media (min-width: $desktop) {
-    margin-bottom: 37px;
+    @media (min-width: $desktop) {
+      margin-bottom: 37px;
+    }
   }
-}
 
-.menu__button-close {
-  @media (min-width: $desktop) {
-    display: none;
+  &__button-close {
+    @media (min-width: $desktop) {
+      display: none;
+    }
   }
-}
 
-.menu__button-search {
-  margin-left: auto;
-}
-.menu__logo {
-  transition: transform 0.5s ease-in-out;
-}
-
-.menu__logo:focus,
-.menu__logo:hover {
-  transform: scale(1.1);
-}
-
-.menu__list {
-  margin-bottom: 32px;
-
-  @media screen and (min-width: $tablet) {
-    margin-bottom: 268px;
+  &__button-search {
+    margin-left: auto;
   }
-}
 
-.menu__link:hover,
-.menu__link:focus,
-.menu__link:active {
-  color: $color-secondary;
-}
+  &__logo {
+    transition: transform 0.5s ease-in-out;
 
-.menu__item {
-  position: relative;
-}
-
-.menu__item::before {
-  content: '';
-  position: absolute;
-  display: inline-block;
-  width: 4px;
-  height: 32px;
-  border-radius: 0 4px 4px 0;
-  background-color: transparent;
-  margin: -4px 12px auto -1 * ($mobile-main);
-
-  @media screen and (min-width: $desktop) {
-    margin-left: -22px;
+    &:focus,
+    &:hover {
+      transform: scale(1.1);
+    }
   }
-}
 
-.menu__item:hover::before,
-.menu__item:focus::before,
-.menu__item:active::before {
-  background-color: #41f6d7;
-}
+  &__list {
+    margin-bottom: 32px;
 
-.menu__item:not(:last-child) {
-  margin-bottom: 32px;
-}
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 268px;
+    }
+  }
 
-.menu__contacts {
-  display: flex;
-  margin-bottom: 16px;
-}
+  &__link:hover,
+  &__link:focus,
+  &__link:active {
+    color: $color-secondary;
+  }
 
-.menu__contacts-item:not(:last-child) {
-  margin-right: $mobile-main;
-}
+  &__item {
+    position: relative;
 
-.menu__mail {
-  display: block;
-  margin-bottom: 12px;
-}
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
 
-.menu__phone {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 32px;
-  letter-spacing: -0.6px;
-}
+    &::before {
+      content: '';
+      position: absolute;
+      display: inline-block;
+      width: 4px;
+      height: 32px;
+      border-radius: 0 4px 4px 0;
+      background-color: transparent;
+      margin: -4px 12px auto -1 * ($mobile-main);
 
-.menu__mail:hover,
-.menu__mail:focus,
-.menu__mail:active,
-.menu__phone:hover,
-.menu__phone:focus,
-.menu__phone:active {
-  cursor: pointer;
-  color: $color-secondary;
-}
+      @media screen and (min-width: $desktop) {
+        margin-left: -22px;
+      }
+    }
+  }
 
-.menu__lang {
-  display: flex;
-  appearance: none;
-}
+  &__item:hover::before,
+  &__item:focus::before,
+  &__item:active::before {
+    background-color: #41f6d7;
+  }
 
-.menu__lang-button {
-  text-transform: uppercase;
-  cursor: pointer;
-}
+  &__contacts {
+    display: flex;
+    margin-bottom: 16px;
+  }
 
-.menu__lang-button:not(:last-child) {
-  margin-right: 7px;
-}
+  &__contacts-item:not(:last-child) {
+    margin-right: $mobile-main;
+  }
 
-.menu__lang-button label {
-  cursor: pointer;
-}
+  &__mail {
+    display: block;
+    margin-bottom: 12px;
+  }
 
-.menu__lang-button label:hover {
-  color: $color-secondary;
-}
+  &__phone {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+  }
 
-.menu__lang-input[type='radio']:checked + label {
-  color: $color-secondary;
+  &__mail:hover,
+  &__mail:focus,
+  &__mail:active,
+  &__phone:hover,
+  &__phone:focus,
+  &__phone:active {
+    cursor: pointer;
+    color: $color-secondary;
+  }
+
+  &__lang {
+    display: flex;
+    appearance: none;
+  }
+
+  &__lang-button {
+    text-transform: uppercase;
+    cursor: pointer;
+
+    & label {
+      cursor: pointer;
+    }
+
+    & label:hover {
+      color: $color-secondary;
+    }
+
+    &:not(:last-child) {
+      margin-right: 7px;
+    }
+  }
+
+  &__lang-input[type='radio']:checked + label {
+    color: $color-secondary;
+  }
 }

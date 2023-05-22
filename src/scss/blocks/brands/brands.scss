@@ -11,95 +11,95 @@
   @media screen and (min-width: $desktop) {
     margin-bottom: 50px;
   }
-}
 
-.brands::after {
-  @include transparent-gradient;
+  &::after {
+    @include transparent-gradient;
 
-  @media screen and (min-width: $tablet) {
-    display: none;
-  }
-}
-
-.brands__title {
-  @include section-title;
-  position: relative;
-  margin-bottom: 24px;
-
-  &::before {
-    @include background-title;
-  }
-}
-
-.brands__list {
-  @media screen and (min-width: $tablet) {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: space-between;
-    justify-items: stretch;
-    gap: 16px 24px;
-    padding: 24px 0;
-  }
-
-  @media screen and (min-width: $desktop) {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px 32px;
-  }
-}
-
-.brands__item-button {
-  @include button-swiper;
-  padding: 16px;
-  min-width: 240px;
-  height: 72px;
-
-  @media screen and (min-width: $tablet) {
-    min-width: 224px;
-    width: 100%;
-  }
-
-  @media screen and (min-width: $desktop) {
-    min-width: 240px;
-  }
-
-  &--apple {
-    padding-top: 12px;
-  }
-
-  &--hp {
-    padding: 10px;
-  }
-}
-
-.brands__button {
-  display: none;
-
-  @media screen and (min-width: $tablet) {
-    display: inherit;
-  }
-}
-
-.brands__item {
-  &:nth-child(n + 7) {
     @media screen and (min-width: $tablet) {
       display: none;
     }
+  }
 
-    @media screen and (min-width: $desktop) {
-      display: block;
+  &__title {
+    @include section-title;
+    position: relative;
+    margin-bottom: 24px;
+
+    &::before {
+      @include background-title;
     }
   }
 
-  &:nth-child(n + 9) {
+  &__list {
+    @media screen and (min-width: $tablet) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-content: space-between;
+      justify-items: stretch;
+      gap: 16px 24px;
+      padding: 24px 0;
+    }
+
     @media screen and (min-width: $desktop) {
-      display: none;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px 32px;
     }
   }
-}
 
-.brands__item-button {
-  @media screen and (min-width: $mobile) {
-    min-width: 224px;
-    width: 100%;
+  &__item-button {
+    @include button-swiper;
+    padding: 16px;
+    min-width: 240px;
+    height: 72px;
+
+    @media screen and (min-width: $tablet) {
+      min-width: 224px;
+      width: 100%;
+    }
+
+    @media screen and (min-width: $desktop) {
+      min-width: 240px;
+    }
+
+    &--apple {
+      padding-top: 12px;
+    }
+
+    &--hp {
+      padding: 10px;
+    }
+  }
+
+  &__button {
+    display: none;
+
+    @media screen and (min-width: $tablet) {
+      display: inherit;
+    }
+  }
+
+  &__item {
+    &:nth-child(n + 7) {
+      @media screen and (min-width: $tablet) {
+        display: none;
+      }
+
+      @media screen and (min-width: $desktop) {
+        display: block;
+      }
+    }
+
+    &:nth-child(n + 9) {
+      @media screen and (min-width: $desktop) {
+        display: none;
+      }
+    }
+  }
+
+  &__item-button {
+    @media screen and (min-width: $mobile) {
+      min-width: 224px;
+      width: 100%;
+    }
   }
 }

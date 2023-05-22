@@ -5,96 +5,90 @@
   @media (min-width: $desktop) {
     padding: 40px 0 16px 0;
   }
-}
 
-.pagination-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
+  &__title {
+    position: relative;
+    margin-bottom: 24px;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: -0.6px;
+    z-index: 3;
 
-.pagination__title {
-  position: relative;
-  margin-bottom: 24px;
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 40px;
-  letter-spacing: -0.6px;
-  z-index: 3;
+    &::before {
+      @include title-decoration;
+      left: -16px;
 
-  &::before {
-    @include title-decoration;
-    left: -16px;
-
-    @media (min-width: $tablet) {
-      left: -24px;
+      @media (min-width: $tablet) {
+        left: -24px;
+      }
     }
   }
-}
 
-.pagination-contacts {
-  display: none;
-
-  @media (min-width: $desktop) {
-    display: flex;
-    gap: 32px;
-  }
-}
-
-.pagination__contacts-button {
-  display: flex;
-  align-items: center;
-  min-width: 171px;
-  min-width: 171px;
-  background-color: $color-background;
-}
-
-.pagination__contacts-text {
-  margin-right: 8px;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 24px;
-}
-
-.pagination-list {
-  display: flex;
-  flex-basis: 100%;
-  overflow: scroll;
-
-  &::after {
-    @include transparent-gradient;
-
-    @media (min-width: $tablet) {
-      width: 30px;
-    }
+  &__contacts {
+    display: none;
 
     @media (min-width: $desktop) {
-      display: none;
+      display: flex;
+      gap: 32px;
     }
   }
 
-  &::-webkit-scrollbar {
-    width: 0;
+  &__contacts-button {
+    display: flex;
+    align-items: center;
+    min-width: 171px;
+    min-width: 171px;
+    background-color: $color-background;
   }
-}
 
-.pagination__link {
-  margin: 4px 12px;
-}
+  &__contacts-text {
+    margin-right: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+  }
 
-.pagination__item {
-  color: $color-secondary;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 24px;
-  white-space: nowrap;
-  border: 2px solid transparent;
+  &__list {
+    display: flex;
+    flex-basis: 100%;
+    overflow: scroll;
 
-  &:hover,
-  &:focus,
-  &:active {
-    border: 2px solid $color-accent;
-    border-radius: 6px;
-    background-color: $color-light;
+    &::after {
+      @include transparent-gradient;
+
+      @media (min-width: $tablet) {
+        width: 30px;
+      }
+
+      @media (min-width: $desktop) {
+        display: none;
+      }
+    }
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+
+  &__link {
+    margin: 4px 12px;
+  }
+
+  &__item {
+    color: $color-secondary;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    white-space: nowrap;
+    border: 2px solid transparent;
+
+    &:hover,
+    &:focus,
+    &:active {
+      border: 2px solid $color-accent;
+      border-radius: 6px;
+      background-color: $color-light;
+    }
   }
 }

@@ -10,17 +10,6 @@
     padding: 21px 0;
   }
 
-  &__wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-
-    @media screen and (min-width: $tablet) {
-      flex-direction: row;
-      gap: 32px;
-    }
-  }
-
   &__text {
     font-size: 14px;
     font-weight: 500;
