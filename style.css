@@ -455,8 +455,7 @@ input {
       background-color: #ffffff; }
 
 .about {
-  margin-bottom: 24px;
-  margin-right: 16px; }
+  margin-bottom: 24px; }
   @media (min-width: 768px) {
     .about {
       margin-bottom: 32px; } }
